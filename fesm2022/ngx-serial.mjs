@@ -21,8 +21,9 @@ class NgxSerial {
     async readLoop() {
         while (this.port.readable && this.keepReading) {
             const textDecoder = new TextDecoderStream();
+            const readableStream = new ReadableStream();
             this.readableStreamClosed = this.port.readable.pipeTo(textDecoder.writable);
-            this.reader = this.port.readable //textDecoder.readable
+            this.reader = readableStream //textDecoder.readable
                 //.pipeThrough(new TransformStream(new LineBreakTransformer(this.controlCharacter)))
                 .getReader();
             try {
