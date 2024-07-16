@@ -1,0 +1,8 @@
+/*
+ * Public API Surface of ngx-serial
+ */
+/*export * from './lib/ngx-serial.service';
+export * from './lib/ngx-serial.component';
+export * from './lib/ngx-serial.module';*/
+export * from './lib/ngx-serial';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljLWFwaS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3Byb2plY3RzL25neC1zZXJpYWwvc3JjL3B1YmxpYy1hcGkudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0dBRUc7QUFFSDs7MENBRTBDO0FBQzFDLGNBQWMsa0JBQWtCLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKlxyXG4gKiBQdWJsaWMgQVBJIFN1cmZhY2Ugb2Ygbmd4LXNlcmlhbFxyXG4gKi9cclxuXHJcbi8qZXhwb3J0ICogZnJvbSAnLi9saWIvbmd4LXNlcmlhbC5zZXJ2aWNlJztcclxuZXhwb3J0ICogZnJvbSAnLi9saWIvbmd4LXNlcmlhbC5jb21wb25lbnQnO1xyXG5leHBvcnQgKiBmcm9tICcuL2xpYi9uZ3gtc2VyaWFsLm1vZHVsZSc7Ki9cclxuZXhwb3J0ICogZnJvbSAnLi9saWIvbmd4LXNlcmlhbCc7XHJcbiJdfQ==
