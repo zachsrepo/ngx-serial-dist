@@ -20,16 +20,13 @@ class NgxSerial {
     }
     async readLoop() {
         while (this.port.readable && this.keepReading) {
-            const textDecoder = new TextDecoderStream();
-            //const readableStream = new ReadableStream();
-            this.readableStreamClosed = this.port.readable.pipeTo(textDecoder.writable);
-            this.reader = textDecoder.readable
-                //.pipeThrough(new TransformStream(new LineBreakTransformer(this.controlCharacter)))
-                .getReader();
+            this.reader = this.port.readable.getReader();
             try {
                 while (true) {
                     const { value, done } = await this.reader.read();
                     if (done) {
+                        // Allow the serial port to be closed later.
+                        this.reader.releaseLock();
                         break;
                     }
                     if (value) {
@@ -38,6 +35,7 @@ class NgxSerial {
                 }
             }
             catch (error) {
+                // TODO: Handle non-fatal read error.
                 console.error("Read Loop error. Have the serial device been disconnected ? ");
             }
         }
